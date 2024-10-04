@@ -14,7 +14,7 @@ Content of Read Md file:
 - Features
 
 Demo: 
-<a href="https://webhack-psi.vercel.app/"> Check Out<a/>
+<a href="https://body-craft.vercel.app/"> Check Out<a/>
 
 ##Abstract
 Utilization of Augmented Reality (AR) technology to create an engaging and interactive experience.
