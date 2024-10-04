@@ -25,24 +25,24 @@ export const features = [
 export const testimonial = [
   {
     id: 1,
-    name: "ADITYA RAJ ",
+    name: "ADITYA RAJ",
     description:
       "I'm a UI/UX designer focused on creating intuitive, engaging interfaces that ensure smooth, user-friendly digital experiences.",
     role: "UI/UX Designer",
   },
   {
     id: 2,
-    name: "ABINASH GIRI",
-    description:
-      "I'm a backend developer specializing in scalable server-side systems that ensure seamless functionality and data management.",
-    role: "BACKEND DEVELOPER",
-  },
-  {
-    id: 3,
     name: "DIVYANK SHARMA",
     description:
       "I'm a front-end developer skilled in creating responsive, visually appealing interfaces that enhance user interaction and experience.",
     role: "FRONTEND DEVELOPER",
+  },
+  {
+    id: 3,
+    name: "ABINASH GIRI",
+    description:
+          "I'm a backend developer specializing in scalable server-side systems that ensure seamless functionality and data management.",
+    role: "BACKEND DEVELOPER",
   },
 ];
 

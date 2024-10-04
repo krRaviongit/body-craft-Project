@@ -422,7 +422,7 @@ const Landing = () => {
           }}
           className="text-gradient"
         >
-          Effective workouts at home without a personal trainer!
+           OUR TEAM
         </Typography>
         <Box
           className="gradient__bg_center"
