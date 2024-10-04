@@ -25,7 +25,7 @@ const options = {
 	method: 'GET',
 	headers: {
 		'Accept-Language': 'en',
-		'X-RapidAPI-Key': process.env.REACT_APP_RECIEPE_API_KEY,
+		'X-RapidAPI-Key': '3effff48damsh519c0b811ca2418p153801jsn96fe7c3cd63a',
 		'X-RapidAPI-Host': 'edamam-recipe-search.p.rapidapi.com'
 	}
 };
@@ -127,7 +127,6 @@ fetchData()
                         {item.description}
                       </Typography>
                       <CardActions>
-                        <Button size="small">Explore <ArrowForward/></Button>
                       </CardActions>
                     </CardContent>
                   </Card>
