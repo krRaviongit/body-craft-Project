@@ -13,12 +13,12 @@ import { useEffect } from "react";
 
 // Firebase Configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD1Cc2Hodemc9itDaYM4hKVWrl7fAuQzmI", // Replace with your actual API key
-  authDomain: "ar-fitness3-e7cfb.firebaseapp.com",
-  projectId: "ar-fitness3-e7cfb",
-  storageBucket: "ar-fitness3-e7cfb.appspot.com",
-  messagingSenderId: "785168326526", // Replace with your actual messaging sender ID
-  appId: "1:785168326526:web:ebb95e9f00e7b5068d1d2f", // Replace with your actual app ID
+  apiKey: "AIzaSyCFmyigmSe_WHXFUefjHqawF_Xr-oxpW4Y",
+  authDomain: "bodycraft-6b09f.firebaseapp.com",
+  projectId: "bodycraft-6b09f",
+  storageBucket: "bodycraft-6b09f.appspot.com",
+  messagingSenderId: "853636114089",
+  appId: "1:853636114089:web:f9779e199afa2b55216bb8",
 };
 
 // Initialize Firebase
