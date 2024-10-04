@@ -34,7 +34,7 @@ Authentication: A service that simplifies the integration of user authentication
 Hosting: A service that provides scalable and secure solutions for deploying and serving your web application.
 ##Mediapipe
 Mediapipe is an open-source framework created by Google, equipped with tools for developing real-time computer vision applications.
-We selected Mediapipe for its pose detection capabilities, which enable precise estimation of 33 key body landmarks in real time.
+We selected Mediapipe for its pose detection capabilities, which enable precise estimation of 33 key body landmarks in real time..
 
 
 
