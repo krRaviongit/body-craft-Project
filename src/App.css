@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text for contrast */
+  font-family: 'Roboto', sans-serif; /* Modern, sleek font */
+  line-height: 1.6;
+}
+
+/* Link styling with red hover effects */
+.link {
+  text-decoration: none;
+  color: #ff0000; /* Neon red link */
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #d40000; /* Darker red on hover */
+}
+
+.link-primary {
+  text-decoration: none !important;
+  color: #ff0000; /* Neon red primary link color */
+}
+
+.link-secondary {
+  text-decoration: none;
+  color: #ff0000; /* Neon red secondary link color */
+}
+
+/* Gradient text with red aesthetics */
+.text-gradient {
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #ff0000 0.89%, /* Neon red */
+    #ff4d4d 17.23%, /* Light red */
+    #ff1a1a 42.04%, /* Bright red */
+    #d40000 55.12%, /* Dark red */
+    #b30000 71.54%, /* Deeper red */
+    #800000 100% /* Darkest red */
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Gradient effect for text */
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 25px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000; /* Black scrollbar track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff0000; /* Neon red scrollbar handle */
+  border-radius: 20px;
+  border: 2px solid #ff1a1a; /* Lighter red border */
+}
+
+/* Icon styling with glowing effect */
+.icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #ff0000; /* Red icon background */
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6); /* Glowing red effect */
+  animation: blink 2s infinite alternate;
+}
+
+.icon:hover {
+  background-color: #d40000; /* Dark red hover effect */
+  box-shadow: 0 0 20px rgba(212, 0, 0, 0.8);
+}
+
+/* Blinking animation */
+@keyframes blink {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+/* Full width container */
+.full-width {
+  width: 80%;
+  margin: 20px auto;
+}
+
+/* Gradient background styling */
+.gradient__bg_white {
+  background: radial-gradient(circle at 75% 50%, rgba(255, 0, 0, 0.4) 10%, rgba(0, 0, 0, 1) 35%);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Responsive background gradient */
+@media screen and (max-width: 768px) {
+  .full-width {
+    width: 100%;
+  }
+
+  .gradient__bg_white {
+    background: linear-gradient(360deg, rgba(255, 0, 0, 0.4) 10%, rgba(0, 0, 0, 1) 95%);
+  }
+}
+
+.gradient__bg_down,
+.gradient__bg_up,
+.gradient__bg_center {
+  background: radial-gradient(circle, #6404049c 0%, rgba(0, 0, 0, 1) 35%);
+}
+
+.gradient__bg_down {
+  background-position: 100% 100%;
+}
+
+.gradient__bg_up {
+  background-position: 0% 100%;
+}
+
+.gradient__bg_center {
+  background-position: 50% 50%;
+}
+
+/* Glassmorphism effect with red accents */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+  box-shadow: 0 8px 32px rgba(255, 0, 0, 0.37); /* Neon red shadow */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 0, 0, 0.18); /* Red border */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Black gradient background */
+.bg-black-gradient {
+  background-color: #000000; /* Black background */
+  box-shadow: rgba(255, 0, 0, 0.2) 0px 2px 1px -1px, /* Neon red shadow */
+    rgba(255, 0, 0, 0.14) 0px 1px 1px 0px,
+    rgba(255, 0, 0, 0.12) 0px 1px 3px 0px;
+  position: relative;
+  transition: margin 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 10px;
+  color: #ffffff; /* White text color */
+  padding: 20px;
+}
+
+/* Button styling with red hover effect */
+button {
+  background-color: #ff0000; /* Neon red button background */
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6); /* Glowing red button */
+}
+
+button:hover {
+  background-color: #d40000; /* Darker red on hover */
+  box-shadow: 0 0 20px rgba(212, 0, 0, 0.8);
+}
