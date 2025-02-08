@@ -1,7 +1,7 @@
 
 # BODYCRAFT
 
-## DEVLOPERS
+## DEVELOPERS
 
 - Abinash Giri
 - Aditya Raj
