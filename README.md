@@ -6,6 +6,7 @@
 - Abinash Giri
 - Aditya Raj
 - Divyank Sharma
+- Kumar Ravi
 
 Content of Read Md file:
 
