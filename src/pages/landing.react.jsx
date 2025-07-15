@@ -6,14 +6,15 @@ import { Icon } from "@mui/material";
 import features from "../data/data";
 import about from "../assets/images/reminder.svg";
 import impFeature from "../assets/images/tracking.svg";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import user from "../assets/images/people02.png";
-import quotes from "../assets/images/quotes.svg";
-import { testimonial } from "../data/data";
+// import Card from "@mui/material/Card";
+// import CardContent from "@mui/material/CardContent";
+// import user from "../assets/images/people02.png";
+// import quotes from "../assets/images/quotes.svg";
+// import { testimonial } from "../data/data";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
+
 const Landing = () => {
   const navigate = useNavigate();
 
@@ -28,7 +29,6 @@ const Landing = () => {
     <>
       <Header />
       {/* Hero Section */}
-
       <Container
         sx={{
           display: "flex",
@@ -126,6 +126,7 @@ const Landing = () => {
           Get Fit Together!
         </Typography>
       </Container>
+
       {/* Features */}
       <Container
         sx={{
@@ -241,6 +242,7 @@ const Landing = () => {
           ))}
         </Box>
       </Container>
+
       {/* About */}
       <Container
         id="about"
@@ -321,6 +323,7 @@ const Landing = () => {
           </Typography>
         </Box>
       </Container>
+
       {/* USP */}
       <Container
         id="services"
@@ -398,123 +401,9 @@ const Landing = () => {
           </Typography>
         </Box>
       </Container>
-      {/* Testimonial */}
-      <Container
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-          height: { lg: "100vh", xs: "100%" },
-          width: "100%",
-          gap: "5rem",
-          position: "relative",
-          padding: "2rem",
-        }}
-        maxWidth="false"
-      >
-        <Typography
-          variant="h2"
-          sx={{
-            fontWeight: "bold",
-            textAlign: "center",
-            fontSize: { xs: "2rem" },
-          }}
-          className="text-gradient"
-        >
-           OUR TEAM
-        </Typography>
-        <Box
-          className="gradient__bg_center"
-          sx={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            zIndex: "-1",
-            width: "100%",
-            height: { lg: "100vh", xs: "100%" },
-          }}
-        />
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "2rem",
-            flexWrap: "wrap",
-            width: "100%",
-          }}
-        >
-          {testimonial.map((item, key) => {
-            return (
-              <Card
-                sx={{
-                  maxWidth: 345,
-                  height: 350,
-                  backgroundColor: "#00040f",
-                  boxShadow: "0 0 10px 0 rgba(0,0,0,0.9)",
-                  borderRadius: "1rem",
-                  color: "#fff",
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "flex-start",
-                  flexDirection: "column",
-                }}
-              >
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "flex-start",
-                    alignItems: "flex-start",
-                    height: "40px",
-                  }}
-                >
-                  <img src={quotes} alt="quotes"></img>
-                </Box>
-                <CardContent
-                  sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    flexDirection: "column",
-                    gap: "1rem",
-                    color: "#fff",
-                  }}
-                >
-                  <Box
-                    sx={{
-                      width: "100px",
-                      height: "100px",
-                    }}
-                  >
-                    <img src={user} alt="user" width="100%" />
-                  </Box>
 
-                  <Typography
-                    gutterBottom
-                    variant="h4"
-                    component="div"
-                    className="text-gradient"
-                    sx={{
-                      textAlign: "center",
-                    }}
-                    key={key}
-                  >
-                    {item.name}
-                  </Typography>
+      {/* OUR TEAM section was removed here */}
 
-                  <Typography variant="body2" color="#fff" className="wrap">
-                    {item.description}
-                  </Typography>
-                  <Typography variant="h6" color="secondary">
-                    {item.role}
-                  </Typography>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </Box>
-      </Container>
     </>
   );
 };
