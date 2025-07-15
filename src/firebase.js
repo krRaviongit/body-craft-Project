@@ -7,27 +7,33 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 import Cookies from "js-cookie";
-import { setDoc, doc, serverTimestamp, getFirestore } from "firebase/firestore";
+import {
+  setDoc,
+  doc,
+  serverTimestamp,
+  getFirestore,
+} from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 import { useEffect } from "react";
 
-// Firebase Configuration
+// ✅ Firebase Configuration (your new correct project)
 const firebaseConfig = {
-  apiKey: "AIzaSyCFmyigmSe_WHXFUefjHqawF_Xr-oxpW4Y",
-  authDomain: "bodycraft-6b09f.firebaseapp.com",
-  projectId: "bodycraft-6b09f",
-  storageBucket: "bodycraft-6b09f.appspot.com",
-  messagingSenderId: "853636114089",
-  appId: "1:853636114089:web:f9779e199afa2b55216bb8",
+  apiKey: "AIzaSyCNs5OfHLqskNp9MZhccbzu4FoQqg4MgIw",
+  authDomain: "body-craft-auth.firebaseapp.com",
+  projectId: "body-craft-auth",
+  storageBucket: "body-craft-auth.appspot.com",
+  messagingSenderId: "854116029509",
+  appId: "1:854116029509:web:f624f051401e7e93093f2c",
+  measurementId: "G-7EHF7SJK9L",
 };
 
-// Initialize Firebase
+// ✅ Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 export const storage = getStorage(app);
 
-// Sign In with Google
+// ✅ Sign In with Google
 export const signInWithGoogle = async () => {
   try {
     const googleProvider = new GoogleAuthProvider();
@@ -42,17 +48,17 @@ export const signInWithGoogle = async () => {
     const email = res.user.email;
     const photo = res.user.photoURL;
 
-    // Store user info in local storage
+    // Save user info
     localStorage.setItem("name", name);
     localStorage.setItem("email", email);
     localStorage.setItem("photo", photo);
 
-    // Save user data to Firestore
+    // Store user in Firestore
     const docRef = doc(db, "user", uid);
     await setDoc(docRef, {
       userID: uid,
       timeStamp: serverTimestamp(),
-      name: res.user.displayName,
+      name: name,
     });
   } catch (err) {
     console.error(err);
@@ -60,22 +66,15 @@ export const signInWithGoogle = async () => {
   }
 };
 
-// Logout Function
-// Logout Function
+// ✅ Logout Function
 export const logout = async () => {
   try {
-    await signOut(auth); // Sign out from Firebase
+    await signOut(auth);
 
-    // Optionally clear Google session
-    const googleProvider = new GoogleAuthProvider();
-    const auth = getAuth();
-    await auth.signOut(); // Ensure Google session is cleared
+    localStorage.clear();
 
-    localStorage.clear(); // Clear local storage
-
-    // Clear all cookies
-    Object.keys(Cookies.get()).forEach(function (cookieName) {
-      Cookies.remove(cookieName); // Remove each cookie
+    Object.keys(Cookies.get()).forEach((cookieName) => {
+      Cookies.remove(cookieName);
     });
 
     console.log("User signed out and cookies cleared");
@@ -84,26 +83,23 @@ export const logout = async () => {
   }
 };
 
-
-// Handle Login Function
+// ✅ Handle Login Again
 export const handleLogin = async () => {
-  await logout(); // Ensure user is logged out before logging in
-  await signInWithGoogle(); // Now sign in with a different account
+  await logout();
+  await signInWithGoogle();
 };
 
-// Hook to Monitor Authentication State
+// ✅ Hook to Monitor Auth State
 export const useAuthListener = () => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        // User is signed in.
         console.log("User is signed in:", user);
       } else {
-        // User is signed out.
         console.log("User is signed out");
       }
     });
 
-    return () => unsubscribe(); // Cleanup subscription on unmount
+    return () => unsubscribe();
   }, []);
 };
